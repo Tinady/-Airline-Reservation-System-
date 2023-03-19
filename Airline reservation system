@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string.h>
+#include<cstring>
+using namespace std;
+
+int reserved[100], counter=0;  
+int menu();    // function to print menu
+int economy(); // function to reserve seat in economy class
+int first();  // function to reserve seat in first class
+void boardPass(int);  // function to print boarding pass
+
+int main(){
+	int option;
+	
+	cout << "\n\t     WELCOME TO ETHIO AIRLINE RESERVATION SYSTEM! \n";
+	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"<<endl;
+	
+	do {
+	
+		option=menu();   //calling menu function and giving the return value to varaible option
+			
+		if(option==1)   //if option is 1 call boardPass with parameter of return value of first function
+			{
+				boardPass(first()); 
+			}
+		if(option==2)  //if option is 2 call boardPass with parameter of return value of first function
+			{
+				boardPass(economy());
+			}
+		if(option==3)  //if option is 3 print cout and exit
+			{
+				cout<<"\nHave a Good Day!"<<endl;
+				return 0;
+			}
+		
+		
+      }while(counter<=100 );
+		
+	
+	return 0;
+}
