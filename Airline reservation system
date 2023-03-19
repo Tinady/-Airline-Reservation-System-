@@ -39,3 +39,26 @@ int main(){
 	
 	return 0;
 }
+int menu() //This will print the menu
+	{ 
+	    
+		int option;
+		
+		cout<<" ..................... MENU OPTIONS .............................\n"<<endl;
+		cout <<"\t\t ------------------------------ \n";
+		cout <<"\t\t For First Class     ...... '1' \n";
+		cout <<"\t\t ------------------------------ \n";
+		cout <<"\t\t For Economy Class   ...... '2' \n ";
+		cout <<"\t\t ------------------------------ \n";
+		cout <<"\t\t To Exit             ...... '3' \n";
+		cout <<"\t\t ------------------------------ \n";
+		cout <<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n";
+		
+		
+		cout<<"Enter your choice here: ";
+		cin>>option;
+		 		
+	    return option;
+    
+	
+	}
