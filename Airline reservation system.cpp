@@ -158,6 +158,66 @@ int first()
 						counter++;			
 						return snum;	
 					}
+					void boardPass(int r)
+ {
+	
+	system("cls");  // clean the terminal
+	
+	char  fname[100] , lname[100] , sex , age[100] , pass[100] , section[30] , sectionf[30]="First class" , sectione[30]="Economy class" , email[100] , num[100];
+	
+	cout<<"\nPlease fill out the form bellow"<<endl;
+	cout<<"------------------------"<<endl;
+		
+	cout<<"First Name: ";
+	cin>>fname;            
+	cout<<"------------------------"<<endl;
+		
+	cout<<"Last Name: ";
+	cin>>lname;
+	cout<<"------------------------"<<endl;	
+		
+	cout<<"Sex: ";
+	cin>>sex;
+	cout<<"------------------------"<<endl;
+		
+	cout<<"Age: ";
+	cin>>age;
+	cout<<"------------------------"<<endl;
+		
+	cout<<"Passport number: ";
+	cin>>pass;
+	cout<<"------------------------"<<endl;
+	
+	cout<<"Email: ";
+	cin>>email;
+	cout<<"------------------------"<<endl;
+	
+	cout<<"Phone Number: ";
+	cin>>num;
+	cout<<"------------------------"<<endl;
+		
+		if(r>=1 && r<=30)  
+		{
+			 strcpy(section,sectionf);
+		}
+		else if(r>=31 && r<=100)
+		{
+			strcpy(section,sectione);
+		}
+		
+	system("cls");  // clean the terminal
+	cout<<"\n\nBoarding pass"<<endl;
+	cout<<"-------------------------------------------------------------------------\n"<<endl;
+		
+	cout<<"First Name"<<"\t"<<"Last Name"<<"\t"<<"Sex"<<"\t"<<"Passport NO"<<"  "<<"Seat NO"<<"\t"<<"Section"<<endl;
+	cout<<fname<<"\t\t"<<lname<<"\t\t"<<sex<<"\t  "<<pass<<"\t"<<r<<"  "<<section<<endl;
+	cout<<"-------------------------------------------------------------------------\n"<<endl;
+		
+	cout<<"\nYour ticket is booked. We have sent the payment specification on "<<email<<"."<<endl;
+	cout<<" Please undergo the transaction within 24Hrs.\n"<<endl;
+	cout<<"Confirmation code will be sent on phone number "<<num<<" as soon as the transuction is done.\n"<<endl;
+	
+ }  // function prints boarding pass
 					
 				}  //Loop for choosing seat number ends here.
 	       }
