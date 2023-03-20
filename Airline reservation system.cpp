@@ -96,3 +96,69 @@ int economy()
 		
 	
 	}   /*this function reserve seat in economy class */
+
+int first()
+   {
+		int f=31,count=0, snum;
+		char choice;
+		bool flag=false;
+		
+		system("cls");  // clean the terminal
+		cout<<"\n First Class"<<endl;
+		cout<<"....................."<<endl;
+		
+			if(count==32)  // Checks if the section is full.
+			{
+				cout<<"\nThis section is full, is it okay to placed in economy class?(y/n): ";
+				cin>>choice;
+				
+				if(choice=='y'||choice=='Y' )
+				{
+						economy();
+				}
+				else
+				{
+					cout<<"\nNext flight leaves in 3 hours"<<endl;
+					return 0;
+				}
+				
+			}  //if statement that checks capactiy of section ends here.
+			
+			else
+			{
+		
+				for(int i=1; i<=f; i++)   //Loop for choosing seat number.
+				{
+					flag=false;
+					cout<<"\nPlease choose seat number from 1 to 31: ";
+					cin>>snum;
+					while(snum<1 || snum>30)
+					{
+						cout<<"\nInvalid Input, Try again."<<endl;
+						cout<<"\nPlease choose seat number from 1 to 31: ";
+						cin>>snum;
+					}
+					
+					for(i=0; i<=31; ++i)  //loop checks if the seat is taken or not.
+					{
+						if(snum==reserved[i])
+						{
+							flag=true;
+							break;
+						}
+					}  //Available seat checking loop ends here.
+					if(flag)
+					{
+						cout<<"\nThis seat is already taken"<<endl;		
+					}	
+					else
+					{	
+						reserved[count]=snum;
+						count++;
+						counter++;			
+						return snum;	
+					}
+					
+				}  //Loop for choosing seat number ends here.
+	       }
+   } /*this function reserve seat in first class */
